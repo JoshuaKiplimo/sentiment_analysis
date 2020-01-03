@@ -1,0 +1,10 @@
+dash
+gunicorn
+dash-html-components
+plotly
+dash-renderer
+dash-core-components
+tweepy
+twitter
+textblob
+requests
