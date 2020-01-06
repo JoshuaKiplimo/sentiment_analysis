@@ -38,11 +38,11 @@ app.layout = html.Div([
                 html.Div(className='myparagraph', children=[
 
                     html.H4('About'),
-                    html.P('To make this possible, most subjective data retrieved from twitter API is analysed for keywords that express sentiments from texts.'
+                    html.P('To make this possible, most subjective data retrieved from Twitter API is analysed for keywords that express sentiments from texts.'
                     ' Data is returned as positive, negative or neutral.'
-                    'This is for experimental purposes and is not 100 percent accurate'),
-                    html.P('To try it out, type in data followed by a asterisk, for example Joshua*. '
-                        'This is to prevent throttling of API requests.'),
+                    ' This is for experimental purposes and may not be 100 percent accurate'),
+                    html.P('To try it out, type in data followed by an asterisk, for example Joshua*.'
+                        ' This to prevent throttling of API requests.'),
                     
                     html.H5('Type in name of person or company'),
                     dcc.Input(id='my-id',
@@ -107,18 +107,18 @@ def update_output_div(input_value):
             #greater than 0 is positive
             # less than 0 is negative 
             #and 0 is neutral 
-            positive_count = 1
+            positive_count = 1 #for now, I will use 1 as a place holder, Needs major update as it skews returned data
             negative_count = 1
             neutral_count = 1
             total = positive_count + negative_count + neutral_count
-            texts = 0
+            texts = 0 # to find out how many texts were actually used in the survey.
             # tweets = twitterdata.get_twitter_data()
             for t in tweets:
                 texts +=1 
                 analysis = TextBlob(t)
                 if analysis.sentiment.polarity > 0.1:
 
-                    if analysis.sentiment.polarity > 0 and analysis.sentiment.subjectivity < 0.7:
+                    if analysis.sentiment.polarity > 0 and analysis.sentiment.subjectivity < 0.7: #increase subjectivity 
                         positive_count += 1
                 elif analysis.sentiment.polarity < 0.1:
                     if analysis.sentiment.polarity < 0 and analysis.sentiment.subjectivity < 0.7:
