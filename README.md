@@ -6,7 +6,7 @@ As of now, the project is still in young and several updates including error han
 
 ### Try it 
 
-To see the sentiment analyis in action, [click here](https://sentiment-analysiss.herokuapp.com/)
+To see the sentiment analyis in action, [click here](https://sentiment-analysiss.herokuapp.com/). Allow up to 30 seconds for Heroku to start up. 
 
 
 
