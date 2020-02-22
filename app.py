@@ -107,9 +107,9 @@ def update_output_div(input_value):
             #greater than 0 is positive
             # less than 0 is negative 
             #and 0 is neutral 
-            positive_count = 1 #for now, I will use 1 as a place holder, Needs major update as it skews returned data
-            negative_count = 1
-            neutral_count = 1
+            positive_count = 0.0000001 #for now, I will use 1 as a place holder, Needs major update as it skews returned data
+            negative_count = 0.0000001
+            neutral_count = 0.00000001
             total = positive_count + negative_count + neutral_count
             texts = 0 # to find out how many texts were actually used in the survey.
             # tweets = twitterdata.get_twitter_data()
@@ -129,13 +129,13 @@ def update_output_div(input_value):
             positive_count = (positive_count/total)*100
             negative_count = (negative_count/total)*100
             neutral_count = (neutral_count/total)*100
-            total = positive_count + negative_count + neutral_count
+            #total = positive_count + negative_count + neutral_count
             print(positive_count, negative_count, neutral_count)
             return dcc.Graph(
                         id ='graph',
                         figure = {
                         'data' : [
-                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive_count, negative_count, neutral_count], 'type':'bar', 'name': 'twitter'}
+                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive_count, negative_count, neutral_count], 'type':'bar', 'name': 'twitter','marker':dict(color=“MediumPurple”)}
 
 
                         ],
@@ -148,6 +148,9 @@ def update_output_div(input_value):
                         'yaxis':{
                              'title':'Percentage Of Sentiment'
                                 }
+                        
+
+
 
                         }
 
