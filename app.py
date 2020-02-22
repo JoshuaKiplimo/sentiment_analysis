@@ -28,8 +28,7 @@ app.title = 'Sentiment Analysis'
 app.layout = html.Div([
     html.Div([
 
-      html.H2(' Twitter Sentiment Analysis'),
-      html.H6('JKiprono'),
+      html.H2(' Twitter Sentiment Analysis')
 
         ], className='banner'),
     html.Div([
