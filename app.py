@@ -29,7 +29,7 @@ app.layout = html.Div([
     html.Div([
 
       html.H2(' Twitter Sentiment Analysis'),
-      html.H6('JKiprono')
+      html.H6('JKiprono'),
 
         ], className='banner'),
     html.Div([
@@ -69,7 +69,7 @@ app.layout = html.Div([
     )
 def update_output_div(input_value):
     if input_value is None or input_value == '':
-        return "Enter an input to see the graph"
+        return "Enter an input in the text area to see graph"
     else:
 
         if input_value[-1] == '*':
