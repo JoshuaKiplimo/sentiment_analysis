@@ -48,7 +48,7 @@ app.layout = html.Div([
                  type='text', 
                  placeholder='Enter Name'
                  ),
-                    html.P(&copy;'JKiprono')
+                    #html.P('JKiprono')
                 ])
             ])
         ],className='four columns',style={'border':'0.5px solid #FFFFFF','marginLeft':'30px','marginTop':'30px','padding':'30px',
