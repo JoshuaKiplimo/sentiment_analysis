@@ -1,11 +1,11 @@
 .banner {
-    height: 75px;
+    height: 80px;
     margin: 0px -10px 10px;
     background-color: #00e6ac;
     border-radius: 4px;
 }
 
-.banner h2{
+.banner h2,h6{
     font: 30px "Times";
 
     color: white;
