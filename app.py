@@ -127,15 +127,18 @@ def update_output_div(input_value):
                     neutral_count += 1
             
             positive = (positive_count/total)*100
+            print(total)
             negative = (negative_count/total)*100
+            print(total)
             neutral = (neutral_count/total)*100
+            print(total)
             #total = positive_count + negative_count + neutral_count
             print(positive, negative, neutral)
             return dcc.Graph(
                         id ='graph',
                         figure = {
                         'data' : [
-                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive, negative, neutral], 'type':'bar', 'name': 'twitter','marker': {'color': ['#b50000', '#e63535', '#fa8989']}}
+                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive, negative, neutral], 'type':'bar', 'name': 'twitter','marker': {'color': ['#00e64d', '#e63535', '#99ccff']}}
 
 
                         ],
