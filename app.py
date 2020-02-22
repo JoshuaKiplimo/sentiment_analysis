@@ -135,7 +135,7 @@ def update_output_div(input_value):
                         id ='graph',
                         figure = {
                         'data' : [
-                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive_count, negative_count, neutral_count], 'type':'bar', 'name': 'twitter','marker':dict(color=“MediumPurple”)}
+                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive_count, negative_count, neutral_count], 'type':'bar', 'name': 'twitter','marker':dict(color=“Yellow”)}
 
 
                         ],
