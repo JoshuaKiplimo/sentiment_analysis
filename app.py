@@ -40,8 +40,7 @@ app.layout = html.Div([
                     html.H4('About'),
                     html.P('To make this possible, most subjective data retrieved from Twitter API is analysed for keywords that express sentiments from texts.'
                     ),
-                    html.P('To try it out, type in data followed by an asterisk, for example Joshua*.'
-                        ' This to prevent throttling of API requests.'),
+                    html.P('Type in data followed by an asterisk, for example Joshua*  - to prevent throttling of API requests.'),
                     
                     html.H5('Type in name of person or company'),
                     dcc.Input(id='my-id',
@@ -49,13 +48,14 @@ app.layout = html.Div([
                  type='text', 
                  placeholder='Enter Name'
                  )
+                    html.P(&copy'Joshua Kiprono 2020')
                 ])
             ])
         ],className='four columns',style={'border':'0.5px solid #FFFFFF','marginLeft':'30px','marginTop':'30px','padding':'30px',
          'border-radius':'6px','height':'75vh','backgroundColor':'#FFFFFF','overflow':'scroll'}),
 
         html.Div([ #tag2, where we return output
-            html.Div(id='output',)
+            html.Div(id='output')
 
             ],className = 'seven columns',style={'margin':'10px','padding':'10px','height':'75vh'})
 
