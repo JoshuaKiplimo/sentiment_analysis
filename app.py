@@ -47,7 +47,7 @@ app.layout = html.Div([
 
                  type='text', 
                  placeholder='Enter Name'
-                 )
+                 ),
                     html.P(&copy;'JKiprono')
                 ])
             ])
