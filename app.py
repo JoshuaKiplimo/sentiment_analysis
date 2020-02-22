@@ -109,7 +109,7 @@ def update_output_div(input_value):
             positive_count = 1 #for now, I will use 1 as a place holder, Needs major update as it skews returned data
             negative_count = 1
             neutral_count = 1
-            total = positive_count + negative_count + neutral_count
+            
             texts = 0 # to find out how many texts were actually used in the survey.
             # tweets = twitterdata.get_twitter_data()
             for t in tweets:
@@ -124,9 +124,9 @@ def update_output_div(input_value):
                         negative_count += 1 
                 else:
                     neutral_count += 1
-            
+            total = positive_count + negative_count + neutral_count
             positive = (positive_count/total)*100
-            print(positive_count,total,positive)
+            print('positive count:', positive_count,"total", total,"positive",positive)
             negative = (negative_count/total)*100
             
             neutral = (neutral_count/total)*100
