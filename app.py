@@ -39,8 +39,7 @@ app.layout = html.Div([
 
                     html.H4('About'),
                     html.P('To make this possible, most subjective data retrieved from Twitter API is analysed for keywords that express sentiments from texts.'
-                    ' Data is returned as positive, negative or neutral.'
-                    ' This is for experimental purposes and may not be 100 percent accurate'),
+                    ),
                     html.P('To try it out, type in data followed by an asterisk, for example Joshua*.'
                         ' This to prevent throttling of API requests.'),
                     
@@ -97,7 +96,7 @@ def update_output_div(input_value):
             url = 'https://api.twitter.com/1.1/search/tweets.json?q=%23'+input_value+'&result_type=mixed&count=100&include_entities=false'
             r = requests.get(url, headers={'Authorization': 'Bearer ' + bearer})
             r = r.json()
-            print(len(r['statuses']))
+            #print(len(r['statuses']))
             tweets = []
             for num in range(len(r['statuses'])):
                 tweets.append(r['statuses'][num]['text'])
@@ -127,13 +126,11 @@ def update_output_div(input_value):
                     neutral_count += 1
             
             positive = (positive_count/total)*100
-            print(total)
+            print(positive_count,total,positive)
             negative = (negative_count/total)*100
-            print(total)
+            
             neutral = (neutral_count/total)*100
-            print(total)
-            #total = positive_count + negative_count + neutral_count
-            print(positive, negative, neutral)
+            
             return dcc.Graph(
                         id ='graph',
                         figure = {
