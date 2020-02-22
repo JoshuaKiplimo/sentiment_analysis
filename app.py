@@ -151,7 +151,7 @@ def update_output_div(input_value):
                         'yaxis':{
                              'title':'Percentage Of Sentiment'
                                 },
-                        'paper_bgcolor'='rgb(233,233,233)'
+                        
                         
 
 
