@@ -55,7 +55,7 @@ app.layout = html.Div([
         ],className='four columns',style={'border':'0.5px solid #FFFFFF','marginLeft':'30px','marginTop':'30px','padding':'30px',
          'border-radius':'6px','height':'75vh','backgroundColor':'#FFFFFF','overflow':'scroll'}),
 
-        html.Div([ #tag2
+        html.Div([ #tag2, where we return output
             html.Div(id='output',)
 
             ],className = 'seven columns',style={'margin':'10px','padding':'10px','height':'75vh'})
@@ -107,9 +107,9 @@ def update_output_div(input_value):
             #greater than 0 is positive
             # less than 0 is negative 
             #and 0 is neutral 
-            positive_count = 0.0000001 #for now, I will use 1 as a place holder, Needs major update as it skews returned data
-            negative_count = 0.0000001
-            neutral_count = 0.00000001
+            positive_count = 1 #for now, I will use 1 as a place holder, Needs major update as it skews returned data
+            negative_count = 1
+            neutral_count = 1
             total = positive_count + negative_count + neutral_count
             texts = 0 # to find out how many texts were actually used in the survey.
             # tweets = twitterdata.get_twitter_data()
@@ -126,16 +126,16 @@ def update_output_div(input_value):
                 else:
                     neutral_count += 1
             
-            positive_count = (positive_count/total)*100
-            negative_count = (negative_count/total)*100
-            neutral_count = (neutral_count/total)*100
+            positive = (positive_count/total)*100
+            negative = (negative_count/total)*100
+            neutral = (neutral_count/total)*100
             #total = positive_count + negative_count + neutral_count
-            print(positive_count, negative_count, neutral_count)
+            print(positive, negative, neutral)
             return dcc.Graph(
                         id ='graph',
                         figure = {
                         'data' : [
-                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive_count, negative_count, neutral_count], 'type':'bar', 'name': 'twitter','marker':dict(color=“Yellow”)}
+                         {'x': ['Positive', 'Negative', 'Neutral'], 'y':[positive, negative, neutral], 'type':'bar', 'name': 'twitter','marker':dict(color=“Yellow”)}
 
 
                         ],
