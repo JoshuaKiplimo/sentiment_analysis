@@ -5,13 +5,22 @@
     border-radius: 4px;
 }
 
-.banner h2,h6{
+.banner h2{
     font: 30px "Times";
 
     color: white;
     padding-top: auto;
     display: inline-block;
     margin:18px 0 18px 2%;
+}
+.banner h6{
+    font: "Times";
+    padding-top: auto;
+    display: inline-block;
+    float: left;
+}
+
+
 }
 .myparagraph{
 	border: 1px;
