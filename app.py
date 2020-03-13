@@ -110,12 +110,12 @@ def update_output_div(input_value):
             # tweets = twitterdata.get_twitter_data()
             for t in tweets:
                 analysis = TextBlob(t)
-                    if analysis.sentiment.polarity > 0 and analysis.sentiment.subjectivity < 0.7: #increase subjectivity
-                        positive_count += 1
-                    elif analysis.sentiment.polarity < 0 and analysis.sentiment.subjectivity < 0.7:
-                        negative_count += 1
-                    else:
-                        neutral_count += 1
+                if analysis.sentiment.polarity > 0 and analysis.sentiment.subjectivity < 0.7: #increase subjectivity
+                    positive_count += 1
+                elif analysis.sentiment.polarity < 0 and analysis.sentiment.subjectivity < 0.7:
+                    negative_count += 1
+                else:
+                    neutral_count += 1
 
             total = positive_count + negative_count + neutral_count
             positive = (positive_count/total)*100
