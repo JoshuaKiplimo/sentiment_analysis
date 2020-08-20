@@ -40,7 +40,7 @@ app.layout = html.Div([
                     html.H4('About'),
                     html.P('To make this possible, most subjective data retrieved from Twitter API is analysed for keywords that express sentiments from texts.'
                     ),
-                    html.P('Type in data followed by an asterisk, for example Joshua*  - to prevent throttling of API requests.'),
+                    html.P('Type in data followed by an asterisk to prevent throttling of API requests.'),
 
                     html.H5('Type in name of person or company'),
                     dcc.Input(id='my-id',
